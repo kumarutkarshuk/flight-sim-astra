@@ -2650,6 +2650,61 @@ input.flap-slider::-moz-range-thumb {
   }
 }
 @media (max-width: 700px) {
+  .mobile-desktop-prompt {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background:
+      radial-gradient(ellipse at 50% 35%, #243b50 0%, transparent 58%),
+      #101b2a;
+  }
+  .mobile-desktop-prompt-card {
+    display: flex;
+    width: min(100%, 390px);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .mobile-desktop-prompt .brand-icon {
+    width: 52px;
+    height: 56px;
+    margin-bottom: 28px;
+    border-radius: 15px;
+  }
+  .mobile-desktop-prompt .brand-icon svg {
+    width: 28px;
+  }
+  .mobile-prompt-eyebrow {
+    margin: 0 0 12px;
+    color: var(--mint);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+  .mobile-desktop-prompt h1 {
+    margin: 0;
+    font-size: clamp(28px, 8vw, 38px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+  }
+  .mobile-prompt-copy {
+    max-width: 300px;
+    margin: 16px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 701px) {
+  .mobile-desktop-prompt {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
   .attitude-indicator {
     display: block;
     width: 42px;

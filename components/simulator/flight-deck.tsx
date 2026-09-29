@@ -446,6 +446,19 @@ export default function FlightDeck() {
       data-aircraft-ready={snapshot.modelLoaded}
       className={`flight-app ${snapshot.lighting} ${snapshot.camera === "cockpit" ? "cockpit-mode" : ""}`}
     >
+      <section className="mobile-desktop-prompt" aria-labelledby="mobile-prompt-title">
+        <div className="mobile-desktop-prompt-card">
+          <span className="brand-icon" aria-hidden="true">
+            <Icon name="plane" size={25} />
+          </span>
+          <p className="mobile-prompt-eyebrow">ASTRA FLIGHT SIMULATOR</p>
+          <h1 id="mobile-prompt-title">Please switch to desktop</h1>
+          <p className="mobile-prompt-copy">
+            Astra is designed for a larger screen. Open this page on a desktop to
+            start your flight.
+          </p>
+        </div>
+      </section>
       <div className="world-canvas" ref={host} />
       <div className="scene-vignette" />
       {snapshot.camera === "cockpit" && (
