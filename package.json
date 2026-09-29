@@ -12,6 +12,7 @@
     "format": "prettier --write app components lib tests scripts playwright.config.ts"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8",
